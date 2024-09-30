@@ -1,0 +1,19 @@
+import os
+  
+files = [f for f in os.listdir('./data3/valid/labels') if f.endswith('.txt')]
+sorted_files = sorted(files, key=lambda x: int(x[:-4]))
+
+count=0
+for file in sorted_files: 
+    count+=1
+    # if count==6 or count==7 or count==8 or count==9 or count==10 or count==91 or count==92 or count==93 or count==94 or count==95:
+    #     os.replace('./data/train/images/'+file, './data/valid/images/'+file)
+        
+    # if count==100:
+    #     count=0
+
+    if 11<=count<=20:
+        os.replace('./data3/valid/labels/'+file, './temp/labels/'+file)
+        
+    if count==30:
+        count=0

@@ -1,0 +1,6 @@
+import os 
+
+for i in range(100):
+    file_path = os.path.join("./", str(i)+'.txt')
+    with open(file_path, 'w') as f:
+      f.write(str(i)+' 0 0 0 0')

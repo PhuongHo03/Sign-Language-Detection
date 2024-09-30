@@ -1,0 +1,9 @@
+import cv2
+import os 
+  
+for file in os.listdir('./'):
+    if file.endswith('.jpg'):
+        img = cv2.imread(file)
+        resized_img = cv2.resize(img, (640, 640))
+        cv2.imwrite(file, resized_img)
+

@@ -1,0 +1,12 @@
+import os 
+
+for file in os.listdir('./'):
+    if file.endswith('.txt'):
+        with open(file, 'r') as f:
+            lines = f.readlines()
+        for i, line in enumerate(lines):
+            numbers = line.split()
+            if float(numbers[1])==0 and float(numbers[2])==0 and float(numbers[3])==0 and float(numbers[4])==0:
+                f = open("C:/Users/Admin/Desktop/t.txt", "a")
+                f.write(os.path.basename(file[:-4])+'\n')
+                f.close()
